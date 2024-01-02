@@ -6,7 +6,7 @@ public class Task_4_RandomPasswordGenerator{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Get user input
+        
         System.out.print("Enter the desired length of the password: ");
         int passwordLength = scanner.nextInt();
 
@@ -22,19 +22,19 @@ public class Task_4_RandomPasswordGenerator{
         System.out.print("Include special characters? (yes/no): ");
         boolean includeSpecialChars = scanner.next().equalsIgnoreCase("yes");
 
-        // Validate input
+        
         if (!(includeNumbers || includeUppercase || includeLowercase || includeSpecialChars)) {
             System.out.println("Error: At least one option (numbers, uppercase, lowercase, special characters) must be selected.");
             return;
         }
 
-        // Generate password
+        
         String password = generateRandomPassword(passwordLength, includeNumbers, includeUppercase, includeLowercase, includeSpecialChars);
 
-        // Display the generated password
+        
         System.out.println("Your generated password is: " + password);
 
-        // Close scanner
+        
         scanner.close();
     }
 
